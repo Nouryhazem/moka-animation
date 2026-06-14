@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moka | Beyond Motion - 2D & 3D Animation Studio</title>
+    <meta name="description" content="Moka is a premium creative studio specializing in high-end 2D & 3D animation, cinematic direction, and AI-driven video synthesis. We bridge the gap between imagination and reality through cutting-edge motion." />
+    <meta name="keywords" content="animation studio, 2D animation, 3D motion graphics, AI video, cinematic direction, Moka, motion design, visual storytelling" />
+    <meta name="author" content="Moka Studio" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://moka.animation/" />
+    <meta property="og:title" content="Moka | Beyond Motion - 2D & 3D Animation Studio" />
+    <meta property="og:description" content="High-end 2D & 3D animation, cinematic direction, and AI-driven video synthesis." />
+    <meta property="og:image" content="https://picsum.photos/seed/moka-og/1200/630" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://moka.animation/" />
+    <meta property="twitter:title" content="Moka | Beyond Motion - 2D & 3D Animation Studio" />
+    <meta property="twitter:description" content="High-end 2D & 3D animation, cinematic direction, and AI-driven video synthesis." />
+    <meta property="twitter:image" content="https://picsum.photos/seed/moka-og/1200/630" />
+
+    <!-- Suppression styles for benign iframe sandbox errors -->
+    <style>
+      vite-error-overlay, [id^="vite-error-overlay"], .vite-error-overlay {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+      }
+    </style>
+
+    <!-- Global catcher for WebSocket iframe warnings -->
+    <script>
+      (function() {
+        const swallowBenignWebSocket = function(e) {
+          try {
+            var msg = e.message || "";
+            var reasonMsg = (e.reason && (e.reason.message || String(e.reason))) || "";
+            var combined = (msg + " " + reasonMsg).toLowerCase();
+            if (
+              combined.indexOf("websocket") > -1 || 
+              combined.indexOf("ws://") > -1 || 
+              combined.indexOf("sockjs") > -1 ||
+              combined.indexOf("closed without opened") > -1
+            ) {
+              e.preventDefault();
+              if (e.stopPropagation) e.stopPropagation();
+              if (e.stopImmediatePropagation) e.stopImmediatePropagation();
+              return true;
+            }
+          } catch (err) {}
+        };
+        window.addEventListener('error', swallowBenignWebSocket, { capture: true });
+        window.addEventListener('unhandledrejection', swallowBenignWebSocket, { capture: true });
+      })();
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <!-- DNS Prefetch / Preconnect for rapid connection handshakes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+    <!-- High priority Preload of critical typography stylesheets -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" as="style" />
+    <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" as="style" />
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/geist-font@1.1.0/dist/geist.min.css" as="style" />
+
+    <!-- Actual stylesheets linked so they load concurrently -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" />
+    <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist-font@1.1.0/dist/geist.min.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

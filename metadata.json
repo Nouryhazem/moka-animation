@@ -1,0 +1,8 @@
+{
+  "name": "MokaPortfolio",
+  "description": "A polished portfolio with a custom loading screen and elegant animations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
